@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MSI 2020</title>
+</head>
+
+<body>
+  <main>
+    <a class="logo">MSI 2020</a>
+    <h1 class="is-hidden"></h1>
+    <aside class="favourite">
+      <div class="favourite__title-wrapp ">
+        <h2 class="favourite__title">Favourite</h2>
+        <button class="favourite__title-button"></button>
+      </div>
+      <div class="favourite__modal ">
+        <div class="favourite__jokes">
+        </div>
+      </div>
+    </aside>
+    <section class="joke-find container">
+      <p class="joke-find__hey">Hey!</p>
+      <h2 class="joke-find__title">Let's try to find a joke for you:</h2>
+
+      <form class="joke-theme">
+        <!-- Random input -->
+        <label class="joke-theme__random">
+          <input name="joke-type" type="radio" value="random" />
+          Random
+        </label>
+
+        <!-- Category inputs -->
+        <label class="joke-theme__category">
+          <input name="joke-type" type="radio" value="caterogies" />
+          From caterogies
+        </label>
+        <div class="joke-theme__categories-wrapp">
+          <input id="animal" name="category-option" type="radio" value="animal" />
+          <label for="animal">animal</label>
+
+          <input id="career" name="category-option" type="radio" value="career" />
+          <label for="career">career</label>
+
+          <input id="celebrity" name="category-option" type="radio" value="celebrity" />
+          <label for="celebrity">celebrity</label>
+
+          <input id="dev" name="category-option" type="radio" value="dev" />
+          <label for="dev">dev</label>
+        </div>
+        <!-- Search inputs -->
+        <label class="joke-theme__search">
+          <input name="joke-type" type="radio" value="search" />
+          Search
+        </label>
+        <div class="joke-theme__search-textarea">
+          <input type="text" name="text-search" placeholder="Free text search..." />
+        </div>
+        <!-- Submit input -->
+        <input class="joke-theme__submit" type="submit" value="Get a joke" />
+      </form>
+
+      <div class="joke">
+        <template id="template">
+          <div class="joke-element">
+            <button class="joke-element__like"></button>
+            <div class="joke-block">
+              <div class="joke-block__message-icon-wrapp">
+                <img class="joke-block__message-icon" src="./images/message.svg" alt="">
+              </div>
+
+              <div class="joke-block__id">
+                <p class="joke-block__id-text">ID:&nbsp;</p>
+                <a class="joke-block__link" href=""><img src="./images/link.png" alt=""></a>
+              </div>
+              <p class="joke-block__text"></p>
+              <div class="ditails">
+                <p class="joke-block__update">Last update:&nbsp;<span class="joke-details__updated-at"></span> hours ago
+                </p>
+                <p class="joke-block__category"></p>
+              </div>
+
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

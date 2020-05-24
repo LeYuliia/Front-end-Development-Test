@@ -1,0 +1,330 @@
+.logo {
+  text-decoration: none;
+  font-weight: $bold-font-weight;
+  font-size: 20px;
+  line-height: 28px;
+
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  margin-left: 20px;
+}
+
+.joke-find {
+
+  &__hey {
+    font-weight: $bold-font-weight;
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  &__title {
+    font-weight: $medium-font-weight;
+    font-size: 24px;
+    line-height: 44px;
+
+    margin-bottom: 43px;
+  }
+}
+
+/*========<Form> styles==========*/
+.joke-theme {
+  display: flex;
+  flex-direction: column;
+
+  font-size: $main-font-size;
+  line-height: 26px;
+  margin-bottom: 40px;
+
+  & label,
+  & input {
+    cursor: pointer;
+  }
+
+  & input[name=joke-type] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+    border-radius: 50%;
+    border: 2px solid $secondary-color;
+    outline: none;
+
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  & label {
+    margin-bottom: 10px;
+  }
+
+  & label:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  & input[name=joke-type]:checked,
+  input[name=joke-type]:hover {
+    border: none;
+    background: url(images/radioChecked.svg);
+  }
+
+  /*_______Categories styles_______*/
+
+  &__categories-wrapp {
+    margin-bottom: 20px;
+
+    & input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    & label {
+      display: inline-block;
+
+      text-transform: uppercase;
+      font-weight: $medium-font-weight;
+      color: $secondary-color;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 2px;
+
+      border: 2px solid $secondary-background-color;
+      border-radius: 6px;
+
+      padding: 6px 15px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    & label:last-child {
+      margin-bottom: 0;
+    }
+
+    & input[name=category-option]:checked+label,
+    label:hover {
+      background: #F8F8F8;
+      color: $main-color;
+      font-weight: $medium-font-weight;
+    }
+  }
+
+  /*_______Textarea styles_______*/
+  &__search-textarea input {
+    color: $secondary-color;
+    font-size: 16px;
+    line-height: 22px;
+
+    border-style: 0;
+    border-radius: 10px;
+    border: 2px solid $main-color;
+    outline: none;
+
+    width: 100%;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 20px;
+  }
+
+  /*_______Submit styles_______*/
+  &__submit {
+    width: min-content;
+    padding: 10px 40px;
+
+    color: #ffffff;
+    font-weight: $bold-font-weight;
+    font-size: 16px;
+    line-height: 22px;
+
+    border-style: none;
+    border-radius: 10px;
+    background-color: #7291FF;
+  }
+}
+
+/*======== Jokes block ============*/
+.joke-element {
+  background-color: $secondary-background-color;
+  border-radius: 20px;
+
+  position: relative;
+
+  padding: 20px;
+  padding-top: 47px;
+  margin-bottom: 20px;
+
+  &__like {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    width: 20px;
+    height: 17px;
+    mask-image: url(images/like.svg);
+    background: #FF6767;
+  }
+
+  &__like:hover {
+    mask-image: url(images/activeLike.svg);
+  }
+
+  .is-active {
+    mask-image: url(images/activeLike.svg);
+  }
+}
+
+.joke-block {
+  position: relative;
+  padding-left: 60px;
+
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: start;
+
+  &__message-icon-wrapp {
+    background-image: url(images/ellipse.svg);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  &__message-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__id {
+    display: flex;
+    font-weight: $medium-font-weight;
+    margin-bottom: 5px;
+  }
+
+  &__id-text {
+    color: $secondary-color;
+  }
+
+  &__link {
+    display: flex;
+    color: #8EA7FF;
+    text-decoration-line: underline;
+  }
+
+  &__link img {
+    width: 10px;
+    height: 10px;
+
+    margin-left: 5px;
+  }
+
+  &__text {
+    font-size: $main-font-size;
+    line-height: 26px;
+
+    padding-bottom: 28px;
+  }
+
+  &__update {
+    color: $secondary-color;
+    margin-bottom: 7px;
+  }
+
+  &__update span {
+    font-weight: $medium-font-weight;
+  }
+
+  &__category {
+    display: inline-block;
+
+    padding: 6px 20px;
+
+    text-transform: uppercase;
+    color: $main-color;
+    letter-spacing: 2px;
+    font-weight: $medium-font-weight;
+    font-size: 10px;
+    line-height: 14px;
+
+    background: $main-background-color;
+    border-radius: 6px;
+  }
+}
+
+/*========= MEDIA STYLES FOR TABLET===============*/
+@media screen and (min-width: 834px) {
+  .logo {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+
+  /*<Form> styles*/
+  .joke-theme {
+    &__categories-wrapp {
+      & label {
+        margin-bottom: 0px;
+      }
+
+      & label:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  /*Jokes block*/
+  .joke-element {
+    padding: 40px;
+    padding-top: 67px;
+
+    &__like {
+      top: 40px;
+      right: 40px;
+    }
+  }
+
+  .joke-block {
+    &__link img {
+      width: 8px;
+      height: 8px;
+    }
+
+    &__update {
+      margin-bottom: 0;
+    }
+
+    & .ditails {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+}
+
+/*========= MEDIA STYLES FOR DESCTOP===============*/
+@media screen and (min-width: 1440px) {
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    margin: 0;
+  }
+
+  .joke-find {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 146px;
+    margin-left: 140px;
+  }
+
+  .joke-block__text {
+    padding-bottom: 23px;
+  }
+}

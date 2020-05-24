@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  //overflow: hidden;
+  font-family: $main-font-family;
+  font-weight: $regular-font-weight;
+  color: $main-color;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+div {
+  margin: 0;
+}
+
+
+main {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    //align-items: stretch;
+  }
+}
+
+.container {
+  width: 340px;
+  margin: 0 auto;
+
+  padding-bottom: 70px;
+
+  @media screen and (min-width: 834px) {
+    width: 754px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 680px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.is-hidden {
+  display: none;
+}

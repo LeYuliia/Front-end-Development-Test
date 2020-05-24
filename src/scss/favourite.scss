@@ -1,0 +1,174 @@
+.favourite-hidden {
+  .favourite__modal {
+    display: none;
+  }
+
+  .favourite__title-button {
+    background: url(images/favBtnShow.png);
+  }
+}
+
+.favourite {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  &__modal {
+    position: absolute;
+    overflow: auto;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: $secondary-background-color;
+
+  }
+
+  &__title-wrapp {
+    display: flex;
+    flex-direction: row-reverse;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  &__title {
+    color: $secondary-color;
+    font-weight: $medium-font-weight;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &__title-button {
+    width: 28px;
+    height: 28px;
+    border-style: none;
+    background: url(images/favBtnHide.png);
+    margin-right: 10px;
+  }
+
+  /**======== Joke block styles =============*/
+  &__jokes {
+    margin: 20px;
+    margin-top: 88px;
+
+    .joke-element {
+      background-color: $main-background-color;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .joke-block {
+      &__message-icon-wrapp {
+        background-image: url(images/ellipseFav.svg);
+      }
+
+      &__link img {
+        width: 8px;
+        height: 8px;
+      }
+
+      &__text {
+        font-size: $secondary-font-size;
+        line-height: 20px;
+
+        padding-bottom: 20px;
+      }
+
+      &__update {
+        margin-bottom: 0;
+      }
+
+      &__category {
+        display: none;
+      }
+    }
+  }
+}
+
+/*========= MEDIA STYLES FOR TABLET===============*/
+
+@media screen and (min-width: 834px) {
+  .favourite-hidden {
+    .favourite__modal {
+      display: none;
+    }
+
+    .favourite__title-button {
+      background: url(images/favBtnShow.png);
+    }
+  }
+
+  .favourite {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &__title-wrapp {
+      top: 40px;
+      right: 40px;
+    }
+
+    &__modal {
+      min-width: 0;
+      width: 480px;
+
+      position: absolute;
+      overflow: auto;
+
+      background-color: $secondary-background-color;
+    }
+
+    /**======== Joke block styles =============*/
+    &__jokes {
+      margin: 40px;
+      margin-top: 88px;
+
+      .joke-element {
+        padding: 20px;
+        padding-top: 47px;
+      }
+    }
+  }
+}
+
+/*========= MEDIA STYLES FOR DESCTOP===============*/
+@media screen and (min-width: 1440px) {
+
+  .favourite {
+    position: static;
+    min-width: 0;
+    width: 33%;
+    padding: 40px;
+
+    background-color: $secondary-background-color;
+
+    &__modal {
+      width: initial;
+      position: static;
+      overflow: hidden;
+    }
+
+    &__title-wrapp {
+      position: static;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &__title-button {
+      display: none;
+    }
+
+    /**======== Joke block styles =============*/
+    &__jokes {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+}
